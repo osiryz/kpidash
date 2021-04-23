@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container theme-showcase" role="main" style="margin-top: 75px">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        {% if current_user.is_authenticated %}
+        <h1>Hello {{current_user.email}}</h1>
+        {% else%}
+        <h1>Hello MCSBT! This is TIP</h1>
+        <h2>Profile:</h2>
+        <h2>Terrance Leung, MCSBT 2021</h2>
+        <h2>Iberia Airlines KPI Dashboard (refer to links above)</h2>
+        <li><a href="{{ url_for('kpi1') }}">KPI1</a></li>
+        <li><a href="{{ url_for('kpi2') }}">KPI2</a></li>
+        <li><a href="{{ url_for('kpi3') }}">KPI3</a></li>
+        <li><a href="{{ url_for('kpi4') }}">KPI4</a></li>
+
+        {% endif %}
+    </div>
+</div>
+<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+<h1 style="color: #5e9ca0;">Profile: Terrance Leung</h1>
+<h2 style="color: #2e6c80;">Iberia Airlines</h2>
+<h2 style="color: #2e6c80;"><span style="font-size: 14px;">Some useful features:</span></h2>
+<ol style="list-style: none; font-size: 14px; line-height: 32px; font-weight: bold;">
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/01-interactive-connection.png" alt="interactive connection" width="45" /> KPI Monitoring</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/02-html-clean.png" alt="html cleaner" width="45" />User Registration</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/03-docs-to-html.png" alt="Word to html" width="45" /> Oracle DB</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/04-replace.png" alt="replace text" width="45" /> Python, Dash, Javascript</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/05-gibberish.png" alt="gibberish" width="45" /> SQLAlchemy</li>
+</ol>
+<h2 style="color: #2e6c80;">&nbsp;</h2>
+<h2 style="color: #2e6c80;">Site Information:</h2>
+<table class="editorDemoTable" style="height: 108px; width: 227px;" width="392">
+<thead>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">Backend</td>
+<td style="width: 143px; height: 18px;">Google Cloud</td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">Database</td>
+<td style="width: 143px; height: 18px;">Oracle Cloud&nbsp;</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">KPI 1</td>
+<td style="width: 143px; height: 18px;"><span style="color: #000000; font-size: 13px;">Incidents Raised</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">KPI 2</td>
+<td style="width: 143px; height: 18px;">Incidents Solved</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">KPI 3</td>
+<td style="width: 143px; height: 18px;">SLA</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">KPI 4</td>
+<td style="width: 143px; height: 18px;">Total Incidents</td>
+</tr>
+
+</tbody>
+</table>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+{% endblock %}

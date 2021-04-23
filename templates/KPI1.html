@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Incidents Raised{% endblock %}
+
+{% block content %}
+<li><a href="{{ url_for('kpi1') }}">KPI1</a></li>
+<li><a href="{{ url_for('kpi2') }}">KPI2</a></li>
+<li><a href="{{ url_for('kpi3') }}">KPI3</a></li>
+<li><a href="{{ url_for('kpi4') }}">KPI3</a></li>
+
+<div class="embed-responsive embed-responsive-16by9" role="main">
+    <iframe class="embed-responsive-item" src="/kpi1" frameborder="0" width=700rem height=600rem id="my-iframe" ></iframe>
+</div> 
+{% endblock %}
+

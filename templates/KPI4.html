@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Unsolved Backlog Incidences{% endblock %}
+
+{% block content %}
+<div class="container theme-showcase" role="main" style="margin-top: 75px">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        {% if current_user.is_authenticated %}
+        <h1>Hello {{current_user.email}}</h1>
+        {% else%}
+        <h1>Hello MCSBT! This is TIP</h1>
+        <h2>Profile:</h2>
+        <h2>Terrance Leung, MCSBT 2021</h2>
+        <h2>Iberia Airlines KPI Dashboard (refer to links above)</h2>
+        <li><a href="{{ url_for('kpi1') }}">KPI1</a></li>
+        <li><a href="{{ url_for('kpi2') }}">KPI2</a></li>
+        <li><a href="{{ url_for('kpi3') }}">KPI3</a></li>
+        <li><a href="{{ url_for('kpi4') }}">KPI3</a></li>
+
+        {% endif %}
+    </div>
+</div>
+<div class="embed-responsive embed-responsive-16by9" role="main">
+    <iframe src="/kpi4" frameborder="0" width=700rem height=600rem id="my-iframe" ></iframe>
+</div> 
+{% endblock %}
+
